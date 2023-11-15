@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block principal %}
+
+        <div class="container text-primary">
+            <form method="post">
+
+                {% csrf_token %}
+                <h2 class="text-center mt-5 text-danger"><strong>Datos del Tutor/Dueño</strong></h2>
+                <div class="row">
+
+                    <div class="col-md-7">
+                        <div class="d-flex">
+                            <div class="form-group p-4">
+                                <label for="nombre">Nombre</label>
+                                    {{ form.nombre}}
+                            </div>
+                            <div class="form-group p-4">
+                                <label for="apellido">Especie</label>
+                                    {{ form.especie }}
+                            </div>
+                            <div class="form-group p-4 ">
+                                <label for="num_doc">Raza</label>
+                                    {{ form.raza }}
+                            </div>
+                             <div class="form-group p-4 ">
+                                <label for="num_doc">Sexo</label>
+                                    {{ form.sexo }}
+                            </div>
+                        </div>
+                        <div class="col-md-7 d-flex">
+
+                            <div class="form-group p-4 ">
+                                <label for="num_doc">Edad</label>
+                                    <div class="w-50">{{ form.edad }}</div>
+                            </div>
+                            <div class="form-group p-4 ">
+                                <label for="num_doc">Comportamiento</label>
+                                    <div class="w-50">{{ form.comportamiento }}</div>
+                            </div>
+                            <div class="form-group p-4 ">
+                                <label for="num_doc">Descripcion</label>
+                                    <div class="w-50">{{ form.descripcion }}</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <input type="submit" value="Enviar" class="btn btn-outline-primary">
+            </form>
+        </div>
+
+
+
+{% endblock %}

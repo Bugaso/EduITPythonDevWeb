@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block principal %}
+<div class = "d-flex justify-content-center ">
+    <div class="dropdown" >
+          <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dueño
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="http://127.0.0.1:8000/cliente">Agregar Dueño</a>
+            <a class="dropdown-item" href="http://127.0.0.1:8000/clientes">Mostrar Dueños</a>
+
+          </div>
+    </div>
+    <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Localidad
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/localidad">Agregar Localidad</a>
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/localidades">Mostrar Localidad</a>
+                  </div>
+    </div>
+    <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mascota
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/mascota">Agregar Mascota</a>
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/mascotas">Mostrar Mascota</a>
+                  </div>
+    </div>
+     <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Servicios
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/servicio">Agregar Servicios</a>
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/servicios_tabla">Mostrar Servicios</a>
+                  </div>
+    </div>
+
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block principal %}
+
+
+    <table class="table table-striped">
+        <thead>
+
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Dni</th>
+        </tr>
+
+        </thead>
+        {% for cliente in clientes %}
+            <tr>
+                <th>cliente.nombre</th>
+                <th>cliente.apellido</th>
+                <th>cliente.num_doc</th>
+            </tr>
+        {% endfor %}
+        {% endblock %}
+
+    </table>
+
+
+

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block titulo %}Ingreso de cliente{% endblock %}
+{% block titulo_secundario %}Alta/Modificación de cliente{% endblock %}
+{% block principal %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+        <input type="submit" value="Grabar" class="btn btn-outline-primary">
+    </form>
+{% endblock %}

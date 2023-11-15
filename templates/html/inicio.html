@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block principal %}
+
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'veterinariaApp/img/fondo_principal.jpg'%}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4 " >
+            <span class="section-heading-upper text-white">🦜🐇Clínica veterinaria que en verdad se preocupa por tu 🐕🐈</span>
+          </h2>
+          <p class="mb-3 text-white">"Hasta que no hayas amado a un animal, una parte de tu alma permanecerá dormida", Anatole France</p>
+            <p class="mb-3 text-white"> Nos preocupamos por tu mascota.... Sabemos que la mascota es parte de la familia; por eso en Clínica veterinaria Monteros contamos con los mejores Médicos Veterinarios con formación académica de calidad para ofrecerles un servicio especializado para cuidar de tu mascota.</p>
+         
+        </div>
+      </div>
+    </div>
+   </section>
+
+
+  
+    <!-- Message -->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded ">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-lower text-white">Nuestra Clínica</span>
+              </h2>
+              <p class="mb-0 text-white"> Tenemos más de 10 años ofreciendo nuestros servicios a personas como tú, que necesitan la mejor atención para su mascota.</p>
+                <p class="mb-0 text-white"> Tenemos disponibles a los mejores veterinarios de la ciudad. Están en capacitación constante y siempre disponibles para darte el mejor servicio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock %}

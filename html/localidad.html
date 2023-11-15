@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% load static %}
+{% block principal %}
+        <div class="container text-primary">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <br>
+            <input href="http://127.0.0.1:8000/mascota" type="submit" value="Enviar" class="btn btn-outline-primary">
+            </form>
+        </div>
+{% endblock %}

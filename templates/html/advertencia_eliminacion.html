@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block principal %}
+
+            <h1>¿Seguro que quiere eliminar?</h1>
+         <form method="post" class="p-3 mb-2 bg-white text-dark">
+        {% csrf_token %}
+             <p> Codigo Postal: {{ form.cp }}</p>
+             <p> Localidad: {{ form.localidad }}</p>
+             <p> Provincia: {{ form.provincia }}</p>
+             <p> Pais: {{ form.pais }}</p>
+
+        <br>
+        <input type="submit" value="Confirmar" class="bg-danger hover-overlay " >
+
+         </form>
+
+
+
+{% endblock %}

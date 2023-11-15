@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+{% block principal %}
+
+        <div class="container text-primary bg-white">
+            <form method="post">
+
+                {% csrf_token %}
+                <h2 class="text-center mt-5 text-danger"><strong>Datos del Tutor/Dueño</strong></h2>
+                <div class="row">
+
+                    <div class="col-md-7">
+                        <div class="d-flex">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                    {{ form.nombre}}
+                            </div>
+                            <div class="form-group">
+                                <label for="apellido">Apellido</label>
+                                    {{ form.apellido }}
+                            </div>
+                            <div class="form-group ">
+                                <label for="num_doc">N° de documento</label>
+                                    {{ form.num_doc }}
+                            </div>
+
+                             <div class="form-group ">
+                                <label for="num_doc">Fecha de Nacimiento</label>
+                                    {{ form.fecha_nacimiento }}
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="num_doc">Edad</label>
+                                    <div class="w-50">{{ form.edad }}</div>
+
+                            </div>
+                        </div>
+
+                         <div class="d-flex">
+
+                            <div class="form-group ">
+                                <label for="num_doc">Email</label>
+                                    <div class="w-50">{{ form.email }}</div>
+                            </div>
+
+                              <div class="form-group ">
+                                <label for="num_doc">Telefono</label>
+                                    <div class="w-50">{{ form.telefono1 }}</div>
+                            </div>
+
+                             <div class="form-group ">
+                                <label for="num_doc">Telefono Alter.</label>
+                                    <div class="w-50">{{ form.telefono2 }}</div>
+                            </div>
+
+                             <div class="form-group ">
+                                <label for="num_doc">CUIT/CUIL.</label>
+                                    <div class="w-50">{{ form.cuit }}</div>
+                            </div>
+
+                             <div class="form-group ">
+                                <label for="num_doc">Genero.</label>
+                                    {{ form.genero }}
+                             </div>
+                         </div>
+
+                         <div class="d-block">
+
+                             <div> <h4><strong>Domicilio</strong></h4></div>
+
+                             <div class = "d-flex">
+                                 <div class="form-group ">
+                                    <label for="num_doc">Calle.</label>
+                                    <div class="w-50">{{ form.calle }}</div>
+                                </div>
+                                 <div class="form-group ">
+                                    <label for="num_doc">N° de calle/ Altura.</label>
+                                    <div class="w-50">{{ form.calle_num }}</div>
+                                </div>
+                                 <div class="form-group ">
+                                    <label for="num_doc">Piso.</label>
+                                    <div class="w-50">{{ form.piso }}</div>
+                                </div>
+                                  <div class="form-group ">
+                                    <label for="num_doc">Departamento.</label>
+                                    <div class="w-50">{{ form.dept }}</div>
+                                </div>
+
+                             </div>
+                         </div>
+                         <div class="d-block">
+
+                             <div> <h4><strong>Domicilio Alternativo</strong></h4></div>
+
+                             <div class = "d-flex">
+                                 <div class="form-group ">
+                                    <label for="num_doc">Calle.</label>
+                                    <div class="w-50">{{ form.calle_alternativo }}</div>
+                                </div>
+                                 <div class="form-group ">
+                                    <label for="num_doc">N° de calle/ Altura.</label>
+                                    <div class="w-50">{{ form.calle_num_alternativo }}</div>
+                                </div>
+                                 <div class="form-group ">
+                                    <label for="num_doc">Piso.</label>
+                                    <div class="w-50">{{ form.piso_alternativo }}</div>
+                                </div>
+                                  <div class="form-group ">
+                                    <label for="num_doc">Departamento.</label>
+                                    <div class="w-50">{{ form.dept_alternativo }}</div>
+                                </div>
+
+                             </div>
+                         </div>
+
+
+                    </div>
+                </div>
+                <input type="submit" value="Enviar" class="btn btn-outline-primary" href="http://127.0.0.1:8000/localidad" >
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block principal %}
+
+    <div class="container text-primary">
+    <table class="table table-striped p-3 mb-2 bg-white text-dark">
+        <thead class="text-dark">
+            <tr>
+                <th><b>CP</b></th>
+                <th><b>Localidad</b></th>
+                <th><b>Provincia</b></th>
+                <th><b>Pais</b></th>
+                <th><b>Modificar</b></th>
+                <th><b>Eliminar</b></th>
+
+            </tr>
+        </thead>
+        {% for localidad in localidades %}
+        <tr class="text-danger">
+            <td>{{ localidad.cp }}</td>
+            <td>{{ localidad.localidad }}</td>
+            <td>{{ localidad.provincia }}</td>
+            <td>{{ localidad.pais }}</td>
+            <td><a href="{% url modificar_localidad localidad.id %}"><img src="{% static 'veterinariaApp/img/icono/modificar.png' %}"></a> </td>
+            <td><a href="{% url eliminar_localidad localidad.id %}"><img src="{% static 'veterinariaApp/img/icono/borrar.png' %}"></a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}
